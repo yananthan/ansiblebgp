@@ -1,0 +1,48 @@
+[ananthan@niamsrv Cisco]$ ansible-playbook shuttingbgpfromcli.yml 
+
+PLAY [Getting BGP Inventory] ***********************************************************************************************************
+
+TASK [Getting BGP Inventory] ***********************************************************************************************************
+ok: [CSR01]
+
+TASK [Configure Terminal] **************************************************************************************************************
+ok: [CSR01]
+
+TASK [BGP Configuration] ***************************************************************************************************************
+ok: [CSR01]
+
+TASK [BGP Configuration] ***************************************************************************************************************
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER1', 'neighbor_address': '1.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'IBGP-PEER1', 'neighbor_address': '10.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'IBGP-PEER1', 'neighbor_address': '10.1.1.10'})
+ok: [CSR01] => (item={'peer_group': 'IBGP-PEER1', 'neighbor_address': '10.1.1.20'})
+ok: [CSR01] => (item={'peer_group': 'IBGP-PEER1', 'neighbor_address': '10.1.1.30'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER10', 'neighbor_address': '12.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER2', 'neighbor_address': '2.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER20', 'neighbor_address': '22.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER3', 'neighbor_address': '3.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER3', 'neighbor_address': '3.3.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER30', 'neighbor_address': '32.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER30', 'neighbor_address': '32.3.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER4', 'neighbor_address': '4.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER40', 'neighbor_address': '42.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER5', 'neighbor_address': '5.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER6', 'neighbor_address': '6.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER7', 'neighbor_address': '7.1.1.1'})
+ok: [CSR01] => (item={'peer_group': 'EBGP-PEER7', 'neighbor_address': '8.1.1.1'})
+ok: [CSR01] => (item={'remote_as': '65412', 'neighbor_address': 'EBGP-PEER1'})
+ok: [CSR01] => (item={'remote_as': '65422', 'neighbor_address': 'EBGP-PEER10'})
+ok: [CSR01] => (item={'remote_as': '65413', 'neighbor_address': 'EBGP-PEER2'})
+ok: [CSR01] => (item={'remote_as': '65423', 'neighbor_address': 'EBGP-PEER20'})
+ok: [CSR01] => (item={'remote_as': '65414', 'neighbor_address': 'EBGP-PEER3'})
+ok: [CSR01] => (item={'remote_as': '65424', 'neighbor_address': 'EBGP-PEER30'})
+ok: [CSR01] => (item={'remote_as': '65415', 'neighbor_address': 'EBGP-PEER4'})
+ok: [CSR01] => (item={'remote_as': '65425', 'neighbor_address': 'EBGP-PEER40'})
+ok: [CSR01] => (item={'remote_as': '65416', 'neighbor_address': 'EBGP-PEER5'})
+ok: [CSR01] => (item={'remote_as': '65417', 'neighbor_address': 'EBGP-PEER6'})
+ok: [CSR01] => (item={'remote_as': '65418', 'neighbor_address': 'EBGP-PEER7'})
+ok: [CSR01] => (item={'remote_as': '65411', 'neighbor_address': 'IBGP-PEER1'})
+
+PLAY RECAP *****************************************************************************************************************************
+CSR01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

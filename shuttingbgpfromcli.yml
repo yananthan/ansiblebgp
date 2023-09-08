@@ -1,0 +1,27 @@
+
+---
+- name: Getting BGP Inventory
+  hosts: CSR
+  gather_facts: false
+  tasks:
+    - name: Getting BGP Inventory
+      cisco.ios.ios_bgp_global:
+        state: gathered
+      register: bgpglobal
+
+
+    - name: Configure Terminal
+      cli_command:
+        command: config t
+        sendonly: true 
+        
+    - name: BGP Configuration
+      cli_command:
+        command: "router bgp {{ bgpglobal.gathered.as_number  }}"
+        sendonly: true 
+    
+    - name: BGP Configuration
+      cli_command:
+        command: "neighbor {{ item.neighbor_address }} shutdown"
+        sendonly: true
+      loop: "{{ bgpglobal.gathered.neighbors }}"

@@ -1,0 +1,200 @@
+[ananthan@niamsrv Cisco]$ ansible-playbook getbgpinfo.yml 
+
+PLAY [Getting BGP Inventory] ***********************************************************************************************************
+
+TASK [Getting BGP Inventory] ***********************************************************************************************************
+ok: [CSR01]
+
+TASK [Get BGP Info] ********************************************************************************************************************
+ok: [CSR01] => {
+    "msg": {
+        "changed": false,
+        "failed": false,
+        "gathered": {
+            "as_number": "65411",
+            "bgp": {
+                "log_neighbor_changes": true
+            },
+            "neighbors": [
+                {
+                    "neighbor_address": "1.1.1.1",
+                    "peer_group": "EBGP-PEER1",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "10.1.1.1",
+                    "peer_group": "IBGP-PEER1",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "10.1.1.10",
+                    "peer_group": "IBGP-PEER1",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "10.1.1.20",
+                    "peer_group": "IBGP-PEER1",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "10.1.1.30",
+                    "peer_group": "IBGP-PEER1",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "12.1.1.1",
+                    "peer_group": "EBGP-PEER10",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "2.1.1.1",
+                    "peer_group": "EBGP-PEER2",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "22.1.1.1",
+                    "peer_group": "EBGP-PEER20",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "3.1.1.1",
+                    "peer_group": "EBGP-PEER3",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "3.3.1.1",
+                    "peer_group": "EBGP-PEER3",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "32.1.1.1",
+                    "peer_group": "EBGP-PEER30",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "32.3.1.1",
+                    "peer_group": "EBGP-PEER30",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "4.1.1.1",
+                    "peer_group": "EBGP-PEER4",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "42.1.1.1",
+                    "peer_group": "EBGP-PEER40",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "5.1.1.1",
+                    "peer_group": "EBGP-PEER5",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "6.1.1.1",
+                    "peer_group": "EBGP-PEER6",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "7.1.1.1",
+                    "peer_group": "EBGP-PEER7",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "8.1.1.1",
+                    "peer_group": "EBGP-PEER7",
+                    "shutdown": {
+                        "set": true
+                    }
+                },
+                {
+                    "neighbor_address": "EBGP-PEER1",
+                    "remote_as": "65412"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER10",
+                    "remote_as": "65422"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER2",
+                    "remote_as": "65413"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER20",
+                    "remote_as": "65423"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER3",
+                    "remote_as": "65414"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER30",
+                    "remote_as": "65424"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER4",
+                    "remote_as": "65415"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER40",
+                    "remote_as": "65425"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER5",
+                    "remote_as": "65416"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER6",
+                    "remote_as": "65417"
+                },
+                {
+                    "neighbor_address": "EBGP-PEER7",
+                    "remote_as": "65418"
+                },
+                {
+                    "neighbor_address": "IBGP-PEER1",
+                    "remote_as": "65411"
+                }
+            ]
+        }
+    }
+}
+
+PLAY RECAP *****************************************************************************************************************************
+CSR01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,76 @@
+CSR01#sh run | sec router bgp
+router bgp 65411
+ bgp log-neighbor-changes
+ neighbor EBGP-PEER1 peer-group
+ neighbor EBGP-PEER1 remote-as 65412
+ neighbor EBGP-PEER1 shutdown
+ neighbor EBGP-PEER2 peer-group
+ neighbor EBGP-PEER2 remote-as 65413
+ neighbor EBGP-PEER2 shutdown
+ neighbor EBGP-PEER3 peer-group
+ neighbor EBGP-PEER3 remote-as 65414
+ neighbor EBGP-PEER3 shutdown
+ neighbor EBGP-PEER4 peer-group
+ neighbor EBGP-PEER4 remote-as 65415
+ neighbor EBGP-PEER4 shutdown
+ neighbor IBGP-PEER1 peer-group
+ neighbor IBGP-PEER1 remote-as 65411
+ neighbor IBGP-PEER1 shutdown
+ neighbor EBGP-PEER5 peer-group
+ neighbor EBGP-PEER5 remote-as 65416
+ neighbor EBGP-PEER5 shutdown
+ neighbor EBGP-PEER6 peer-group
+ neighbor EBGP-PEER6 remote-as 65417
+ neighbor EBGP-PEER6 shutdown
+ neighbor EBGP-PEER7 peer-group
+ neighbor EBGP-PEER7 remote-as 65418
+ neighbor EBGP-PEER7 shutdown
+ neighbor EBGP-PEER10 peer-group
+ neighbor EBGP-PEER10 remote-as 65422
+ neighbor EBGP-PEER10 shutdown
+ neighbor EBGP-PEER20 peer-group
+ neighbor EBGP-PEER20 remote-as 65423
+ neighbor EBGP-PEER20 shutdown
+ neighbor EBGP-PEER30 peer-group
+ neighbor EBGP-PEER30 remote-as 65424
+ neighbor EBGP-PEER30 shutdown
+ neighbor EBGP-PEER40 peer-group
+ neighbor EBGP-PEER40 remote-as 65425
+ neighbor EBGP-PEER40 shutdown
+ neighbor 1.1.1.1 peer-group EBGP-PEER1
+ neighbor 1.1.1.1 shutdown
+ neighbor 2.1.1.1 peer-group EBGP-PEER2
+ neighbor 2.1.1.1 shutdown
+ neighbor 3.1.1.1 peer-group EBGP-PEER3
+ neighbor 3.1.1.1 shutdown
+ neighbor 3.3.1.1 peer-group EBGP-PEER3
+ neighbor 3.3.1.1 shutdown
+ neighbor 4.1.1.1 peer-group EBGP-PEER4
+ neighbor 4.1.1.1 shutdown
+ neighbor 5.1.1.1 peer-group EBGP-PEER5
+ neighbor 5.1.1.1 shutdown
+ neighbor 6.1.1.1 peer-group EBGP-PEER6
+ neighbor 6.1.1.1 shutdown
+ neighbor 7.1.1.1 peer-group EBGP-PEER7
+ neighbor 7.1.1.1 shutdown
+ neighbor 8.1.1.1 peer-group EBGP-PEER7
+ neighbor 8.1.1.1 shutdown
+ neighbor 10.1.1.1 peer-group IBGP-PEER1
+ neighbor 10.1.1.1 shutdown
+ neighbor 10.1.1.10 peer-group IBGP-PEER1
+ neighbor 10.1.1.10 shutdown
+ neighbor 10.1.1.20 peer-group IBGP-PEER1
+ neighbor 10.1.1.20 shutdown
+ neighbor 10.1.1.30 peer-group IBGP-PEER1
+ neighbor 10.1.1.30 shutdown
+ neighbor 12.1.1.1 peer-group EBGP-PEER10
+ neighbor 12.1.1.1 shutdown
+ neighbor 22.1.1.1 peer-group EBGP-PEER20
+ neighbor 22.1.1.1 shutdown
+ neighbor 32.1.1.1 peer-group EBGP-PEER30
+ neighbor 32.1.1.1 shutdown
+ neighbor 32.3.1.1 peer-group EBGP-PEER30
+ neighbor 32.3.1.1 shutdown
+ neighbor 42.1.1.1 peer-group EBGP-PEER40
+ neighbor 42.1.1.1 shutdown
+CSR01#
